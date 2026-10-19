@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # build output
 dist/
 # generated types
@@ -22,3 +23,36 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+=======
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.astro/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Claude Code
+CLAUDE.md
+.claude/
+>>>>>>> 57ed9ad6785388ca4040a53f769eb9692ad29022
