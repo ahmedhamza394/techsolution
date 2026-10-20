@@ -4,15 +4,23 @@
 
 <style>
 	.pill {
-		display: flex;
-		padding: 0.5rem 1rem;
+		display: inline-flex;
+		align-items: center;
 		gap: 0.5rem;
-		color: var(--accent-text-over);
-		border: 1px solid var(--accent-regular);
-		background-color: var(--accent-regular);
+		padding: 0.5rem 1rem;
+		border: 1.5px solid var(--accent-regular);
 		border-radius: 999rem;
+		color: var(--accent-regular);
 		font-size: var(--text-md);
 		line-height: 1.35;
 		white-space: nowrap;
+		text-decoration: none;
+		transition: background 0.2s, color 0.2s;
+	}
+
+	a.pill:hover,
+	a.pill:focus-visible {
+		background: var(--accent-regular);
+		color: var(--accent-text-over);
 	}
 </style>
