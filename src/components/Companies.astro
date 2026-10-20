@@ -1,0 +1,65 @@
+---
+const companies = [
+	{ name: 'Acme Corp', logo: '/assets/TSLOGO.png' },
+];
+---
+
+<section class="box companies">
+	<h2>Companies I've Worked With</h2>
+	<ul class="logos">
+		{companies.map((c) => (
+			<li>
+				<img src={c.logo} alt={c.name} loading="lazy" />
+			</li>
+		))}
+	</ul>
+</section>
+
+<style>
+	.box {
+		border: 1px solid var(--gray-800);
+		border-radius: 0.75rem;
+		padding: 1.5rem;
+		background-color: var(--gray-999_40);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.companies h2 {
+		font-size: var(--text-lg);
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.logos {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem 3rem;
+	}
+
+	.logos img {
+		height: 3rem;
+		width: auto;
+		filter: grayscale(1);
+		opacity: 0.8;
+		transition: filter 0.2s, opacity 0.2s;
+	}
+
+	.logos img:hover {
+		filter: none;
+		opacity: 1;
+	}
+
+	@media (min-width: 50em) {
+		.box {
+			border-radius: 1.5rem;
+			padding: 2.5rem;
+		}
+		.companies h2 {
+			font-size: var(--text-2xl);
+		}
+	}
+</style>
